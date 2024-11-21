@@ -1,0 +1,46 @@
+/* Definicion de variales */
+:root {
+    --blanco-claro: #F0F1F2;
+    --azul-fuerte: #031CA6;
+    --azul-medio: #0424D9;
+    --azul-claro: #3B8FD9;
+    --color-llamativo: #F29F05;
+    --color-transparent: transparent;
+
+    --text-negro: #222222;
+    --text-gris-claro: #555;
+    --text-gris-claro: #888;
+
+    --poppins: "Poppins", Helvetica, sans-serif;
+}
+
+/* Estilos generales */
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--poppins);
+    font-size: 1.5rem;
+    background-color: var(--blanco-claro);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--color-title);
+}
+
+/* Imagen de fondo */
+body {
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -20px -120px;
+}
+
