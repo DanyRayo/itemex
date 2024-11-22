@@ -1,10 +1,10 @@
 /* Definicion de variales */
 :root {
     --blanco-claro: #F0F1F2;
-    --azul-fuerte: #031CA6;
-    --azul-medio: #0424D9;
+    --azul-fuerte: #04132B;
+    --azul-medio: #202f53;
     --azul-claro: #3B8FD9;
-    --color-llamativo: #F29F05;
+    --color-llamativo: #f28b05;
     --color-transparent: transparent;
 
     --text-negro: #222222;
@@ -25,7 +25,7 @@ body {
     font-family: var(--poppins);
     font-size: 1.5rem;
     background-color: var(--blanco-claro);
-    color: var(--color-text);
+    color: var(--text-negro);
 }
 
 h1,
@@ -36,11 +36,102 @@ h5 {
     color: var(--color-title);
 }
 
-/* Imagen de fondo */
-body {
-    background-image: url(../img/fondo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -20px -120px;
+/* LAYOUT */
+.layout{
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
+/* Header */
+
+.header{
+    width: 100%;
+    height: 23rem;
+    padding: 0 10rem;
+    background-color: var(--azul-fuerte);
+    color: var(--blanco-claro);
+    transition: all 300ms ease-in-out;
+}
+
+.header__info{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    border-bottom: 0.1rem solid var(--blanco-claro);
+}
+
+.header__content{
+    display: block;
+    width: 20%;
+    color: var(--color-llamativo);
+}
+
+.header__social-net{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.header__navbar{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__options{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+
+}
+
+.navbar__list{
+    width: 15rem;
+    transition: all 300ms ease-in-out;
+}
+
+.navbar__list:hover,
+.search__icon:hover{
+    color: var(--color-llamativo);
+}
+
+.header__search{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search__contacto{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.search__icon{
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.search__contacto:hover{
+    background-color: var(--color-llamativo);
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+}
+
+/* Hero */
+.hero{
+    background-color: var(--azul-medio);
+    width: 100%;
+    height: calc(100vh - 23rem);
+}
