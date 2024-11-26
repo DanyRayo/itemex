@@ -49,13 +49,15 @@ h5 {
 
 /* Header */
 .header {
-    position: relative; /* Define al header como contexto de posición */
+    position: relative;
+    /* Define al header como contexto de posición */
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 5rem);
     background: url(../img/16406291_rm373batch2-04_11zon.webp) center center / cover no-repeat;
     background-color: var(--color-transparent);
     color: var(--blanco-claro);
     transition: all 300ms ease-in-out;
+    /* border: 1px solid red; */
 }
 
 /* ---- particles.js container ---- */
@@ -67,14 +69,17 @@ h5 {
 }
 
 .header::before {
-    position: absolute; /* Se posiciona dentro del header */
+    position: absolute;
+    /* Se posiciona dentro del header */
     content: "";
     background: linear-gradient(0deg, rgba(4, 19, 43, 1) 0%, rgba(59, 143, 217, 0) 100%);
     width: 100%;
     height: 100%;
     opacity: 1;
-    pointer-events: none; /* No bloquea interacciones */
-    z-index: 0; /* Asegura que esté detrás del contenido */
+    pointer-events: none;
+    /* No bloquea interacciones */
+    z-index: 0;
+    /* Asegura que esté detrás del contenido */
 }
 
 .header__info {
@@ -98,13 +103,13 @@ h5 {
     z-index: 1;
 }
 
-.header__social-icon{
+.header__social-icon {
     cursor: pointer;
     z-index: 1;
     transition: all 300ms ease-in-out;
 }
 
-.header__social-icon:hover{
+.header__social-icon:hover {
     color: var(--color-llamativo);
 }
 
@@ -235,7 +240,7 @@ h5 {
 
 }
 
-.frase__text{
+.frase__text {
     text-align: end;
 }
 
@@ -331,14 +336,14 @@ h5 {
 }
 
 /* Banner about */
-.banner__about{
+.banner__about {
     width: 100%;
     height: auto;
     padding: 5rem 10rem;
     position: relative;
 }
 
-.banner__about-info{
+.banner__about-info {
     position: relative;
     width: 100%;
     height: 100%;
@@ -347,14 +352,14 @@ h5 {
     justify-content: center;
 }
 
-.banner__about-title{
+.banner__about-title {
     margin-bottom: 5rem;
     text-align: center;
     font-family: var(--font-syn);
     font-size: 4rem;
 }
 
-.banner__about-img{
+.banner__about-img {
     width: 50%;
     height: 100%;
     display: flex;
@@ -362,7 +367,7 @@ h5 {
     justify-content: center;
 }
 
-.banner__about-img--img{
+.banner__about-img--img {
     margin: 0 auto;
     display: block;
     width: 95%;
@@ -371,7 +376,7 @@ h5 {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.banner__about-list{
+.banner__about-list {
     width: 50%;
     display: flex;
     align-items: center;
@@ -380,7 +385,7 @@ h5 {
     gap: 3rem;
 }
 
-.banner__about-list-item{
+.banner__about-list-item {
     display: flex;
     padding: .5rem 1rem;
     align-items: center;
@@ -390,13 +395,13 @@ h5 {
     transition: all 300ms ease-in-out;
 }
 
-.banner__about-text{
+.banner__about-text {
     font-size: 2rem;
     font-family: var(--font-gruppo);
     color: var(--blanco-claro);
 }
 
-.banner__about-icon{
+.banner__about-icon {
     background-color: var(--color-llamativo);
     font-size: 2rem;
     padding: 3rem;
@@ -405,9 +410,137 @@ h5 {
 }
 
 .banner__about-list-item:hover {
-    background-color: var(--blanco-claro); /* Cambia el fondo del item */
+    background-color: var(--blanco-claro);
+    /* Cambia el fondo del item */
 }
 
 .banner__about-list-item:hover .banner__about-text {
-    color: var(--gris-bg); /* Cambia el color del texto específico */
+    color: var(--gris-bg);
+    /* Cambia el color del texto específico */
+}
+
+/* Banner services o portfolio */
+.banner__services {
+    width: 100%;
+    height: 100vh;
+    padding: 5rem 10rem;
+}
+
+.banner__services-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.banner__service-title {
+    display: inline-block;
+    font-family: var(--font-syn);
+    font-size: 3rem;
+}
+
+.banner__service-btn{
+    display: inline-block;
+    position: relative;
+    left: 0;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.banner__service-btn:hover {
+    background-color: var(--color-llamativo);
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+}
+
+.banner__service-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 23rem);
+    gap: 1rem;
+}
+
+.banner__service-card {
+    position: relative;
+    border-radius: 1rem;
+    transition: all 300ms ease-in-out;
+    /* padding: 1rem;     */
+}
+
+.service-card__info {
+    position: absolute;
+    height: 100%;
+    padding: 2rem;
+    background: rgb(32, 47, 83);
+    background: linear-gradient(0deg, rgba(32, 47, 83, 1) 0%, rgba(0, 212, 255, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: start;
+    border-radius: 1rem;
+}
+
+.service-card__title{
+    position: relative;
+    font-family: var(--font-poppins);
+    font-size: 2rem;
+}
+
+.service-card__text{
+    font-family: var(--font-gruppo);
+    font-size: 1.8rem;
+}
+
+.card-1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-image: url(../img/cableado-estructurado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: url(../img/fibra-optica.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-3 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-image: url(../img/comunicacion-inalambrica.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-image: url(../img/servicios-telefonicos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-image: url(../img/seguridad.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
