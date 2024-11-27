@@ -411,19 +411,18 @@ h5 {
 
 .banner__about-list-item:hover {
     background-color: var(--blanco-claro);
-    /* Cambia el fondo del item */
 }
 
 .banner__about-list-item:hover .banner__about-text {
     color: var(--gris-bg);
-    /* Cambia el color del texto específico */
 }
 
 /* Banner services o portfolio */
 .banner__services {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    padding: 5rem 10rem;
+    height: auto;
+    padding: 0rem 10rem 5rem 10rem;
 }
 
 .banner__services-header {
@@ -452,7 +451,6 @@ h5 {
     transition: all 300ms ease-in-out;
     text-align: center;
     font-size: 2rem;
-    z-index: 1;
 }
 
 .banner__service-btn:hover {
@@ -462,10 +460,12 @@ h5 {
 }
 
 .banner__service-content {
+    width: 100%;
+    height: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 4, 1fr);
-    grid-template-rows: repeat(2, 25rem);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 26rem));
     gap: 1rem;
 }
 
@@ -503,7 +503,6 @@ h5 {
 }
 
 .service-card__title {
-    /* margin-top: 100rem; */
     margin-bottom: .5rem;
     font-family: var(--font-syn);
     font-size: 1.5rem;
@@ -560,4 +559,57 @@ h5 {
 .card-5 {
     grid-column: 4/5;
     grid-row: 2/3;
+}
+
+/* Cassusel de logoss */
+.banner__clients {
+    width: calc(100% - 20rem);
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner__clients-logos {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: max-content;
+    gap: 3rem;
+}
+
+.slider-logo__content {
+    width: 20rem;
+}
+
+
+/* .banner__clients-logo--img {
+    height: 50px;
+    max-width: 20rem;
+    opacity: 0.8;
+    margin: 0 auto;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+} */
+
+.banner__clients-logo--img {
+    height: 50px;
+    width: 20rem;  /* Asegúrate de que todas las imágenes tengan el mismo ancho */
+    object-fit: contain;  /* Esto ajusta la imagen sin distorsionarla */
+    opacity: 0.8;
+    margin: 0 auto;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.banner__clients-logo--img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(calc(-20rem * 13));
+    }
 }
