@@ -16,6 +16,7 @@
     --font-poppins: "Poppins", Helvetica, sans-serif;
     --font-gruppo: "Gruppo", sans-serif;
     --font-syn: "Syncopate", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
 }
 
 /* Estilos generales */
@@ -188,7 +189,7 @@ h5 {
 
 .hero__info {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: auto;
     color: var(--blanco-claro);
     background: var(--color-transparent);
@@ -196,10 +197,12 @@ h5 {
 
 .hero__title {
     position: relative;
-    font-size: 6rem;
-    font-family: var(--font-gruppo);
-    line-height: 9rem;
+    font-size: 9rem;
+    font-family: var(--font-roboto);
     font-weight: bold;
+    line-height: 10rem;
+
+    border: 1px solid red;
 }
 
 .hero__subtitle {
@@ -237,17 +240,36 @@ h5 {
     display: flex;
     align-items: end;
     flex-direction: column;
-
 }
 
 .frase__text {
     text-align: end;
 }
 
-.hero__img-top {
-    width: 60%;
+.hero__img-cont {
+    position: relative;
     border-radius: 1rem;
-    left: 5rem;
+    width: 60%;
+    height: auto;
+}
+
+.hero__img-cont::before {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    left: -10rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(4,19,43,0) 0%, rgba(59,143,217,1) 100%);
+    z-index: 0; /* Envía el fondo detrás */
+    border-radius: 1rem; /* O ajusta según tu diseño */
+}
+
+.hero__img-top{
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
 }
 
 /* Banner */
@@ -360,17 +382,33 @@ h5 {
 }
 
 .banner__about-img {
+    position: relative;
+    display: inline-block;
+
     width: 50%;
     height: 100%;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+}
+
+.banner__about-img::before {
+    content: '';
+    position: absolute;
+    top: 1rem; /* Ajusta según tu diseño */
+    left: 1rem;
+    width: 90%;
+    height: 90%;
+    background: #fff;
+    box-shadow: 0 .8rem .2rem rgba(0, 0, 0, 0.2);
+    transform: rotate(-5deg);
+    z-index: -1;
 }
 
 .banner__about-img--img {
     margin: 0 auto;
     display: block;
-    width: 95%;
+    width: 85%;
     border-radius: 1rem;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.2);
