@@ -254,12 +254,14 @@ h5 {
     left: -10rem;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(4,19,43,0) 0%, rgba(59,143,217,1) 100%);
-    z-index: 0; /* Envía el fondo detrás */
-    border-radius: 1rem; /* O ajusta según tu diseño */
+    background: linear-gradient(90deg, rgba(4, 19, 43, 0) 0%, rgba(59, 143, 217, 1) 100%);
+    z-index: 0;
+    /* Envía el fondo detrás */
+    border-radius: 1rem;
+    /* O ajusta según tu diseño */
 }
 
-.hero__img-top{
+.hero__img-top {
     display: block;
     position: relative;
     z-index: 1;
@@ -385,7 +387,8 @@ h5 {
 .banner__about-img::before {
     content: '';
     position: absolute;
-    top: 1rem; /* Ajusta según tu diseño */
+    top: 1rem;
+    /* Ajusta según tu diseño */
     left: 1rem;
     width: 90%;
     height: 90%;
@@ -606,7 +609,7 @@ h5 {
     justify-content: center;
     align-items: center;
     padding: 5rem 0;
-    background: linear-gradient(90deg, rgba(59,143,217,0.8) 0%, rgba(29,29,29,0) 80%);
+    background: linear-gradient(90deg, rgba(59, 143, 217, 0.8) 0%, rgba(29, 29, 29, 0) 80%);
     border-radius: 2rem;
 }
 
@@ -621,7 +624,7 @@ h5 {
     border-bottom: 1px solid var(--color-llamativo);
 }
 
-.banner__scroll-3d{
+.banner__scroll-3d {
     position: absolute;
     bottom: 0;
     width: 50%;
@@ -674,54 +677,87 @@ h5 {
 }
 
 /* Portafolio o nuestros trabajos */
-/* Estilos generales */
-.banner__porfolio {
-    padding: 5rem 10rem;
-  }
-  
-  .banner_portfolio-title {
-    width: fit-content;
-    font-size: 5rem;
-    font-family: var(--font-roboto);
-    color: var(--blanco-claro);
-    margin-bottom: 5rem;
-    border-bottom: .1rem solid var(--color-llamativo);
-  }
-  
-  /* Grid para los items */
-  .banner__porfolio-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 120rem;
-    margin: 0 auto;
-  }
-  
-  .banner__portfolio-item:nth-child(5) {
-    grid-column: span 2;
-  }
-  
-  /* Cada item */
-  .banner__portfolio-item {
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.25); /* Sombra ligera */
-    overflow: hidden; /* Asegura que la imagen no sobresalga */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .banner__portfolio-item:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Más sombra al pasar el ratón */
-  }
-  
-  .banner__portfolio-item-img {
+.banner__portfolio {
+    position: relative;
     width: 100%;
-    height: 200px;
+    height: auto;
+    padding: 5rem 10rem;
+}
+
+.banner__portfolio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.banner_portfolio-title {
+    margin-bottom: 5rem;
+    display: inline-block;
+    font-family: var(--font-roboto);
+    font-size: 5rem;
+    border-bottom: 1px solid var(--color-llamativo);
+}
+
+.banner__portfolio-btn {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.banner__portfolio-btn:hover {
+    background-color: var(--color-llamativo);
+    border: 0.2rem solid var(--blanco-claro);
+    color: var(--blanco-claro);
+}
+
+.banner__porfolio-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas para pantallas grandes */
+    gap: 1.5rem;
+}
+
+.banner__portfolio-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+}
+
+.banner__portfolio-item-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .banner__portfolio-item-img:hover {
-    transform: scale(1.1);
-  }
-  
+    /* Mantén la proporción de las imágenes */
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner__portfolio-item:hover .banner__portfolio-item-img {
+    transform: scale(1.2);
+    /* Efecto hover */
+}
+
+
+@media screen and (max-width: 1200px) {
+    .banner__porfolio-content {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas para pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner__porfolio-content {
+        grid-template-columns: 1fr;
+        /* 1 columna en pantallas móviles */
+    }
+}
