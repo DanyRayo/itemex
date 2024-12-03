@@ -2,7 +2,7 @@
 :root {
     --blanco-claro: #F0F1F2;
     --gris-bg: #1d1d1d;
-    --negro-fuerte: #010307;
+    --negro-fuerte: #0b0b0c;
     --azul-fuerte: #04132B;
     --azul-medio: #202f53;
     --azul-claro: #3B8FD9;
@@ -760,4 +760,28 @@ h5 {
         grid-template-columns: 1fr;
         /* 1 columna en pantallas móviles */
     }
+}
+
+
+.footer{
+    width: 100%;
+    padding: 10rem 10rem;
+    background-color: var(--negro-fuerte);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__info{
+    width: 33%;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo__footer{
+    width: 50%
 }
