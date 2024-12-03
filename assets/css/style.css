@@ -51,14 +51,12 @@ h5 {
 /* Header */
 .header {
     position: relative;
-    /* Define al header como contexto de posición */
     width: 100%;
-    height: calc(100vh + 5rem);
+    min-height: 90rem;
     background: url(../img/16406291_rm373batch2-04_11zon.webp) center center / cover no-repeat;
     background-color: var(--color-transparent);
     color: var(--blanco-claro);
     transition: all 300ms ease-in-out;
-    /* border: 1px solid red; */
 }
 
 /* ---- particles.js container ---- */
@@ -71,16 +69,13 @@ h5 {
 
 .header::before {
     position: absolute;
-    /* Se posiciona dentro del header */
     content: "";
     background: linear-gradient(0deg, rgba(4, 19, 43, 1) 0%, rgba(59, 143, 217, 0) 100%);
     width: 100%;
     height: 100%;
     opacity: 1;
     pointer-events: none;
-    /* No bloquea interacciones */
     z-index: 0;
-    /* Asegura que esté detrás del contenido */
 }
 
 .header__info {
@@ -201,8 +196,7 @@ h5 {
     font-family: var(--font-roboto);
     font-weight: bold;
     line-height: 10rem;
-
-    border: 1px solid red;
+    padding: 0rem 50rem 5rem 0;
 }
 
 .hero__subtitle {
@@ -286,24 +280,19 @@ h5 {
     height: 100%;
     background:
         linear-gradient(to left, transparent 0%, rgba(29, 29, 29, 1) 80%),
-        /* Más abrupto */
         url('../img/bg-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* Imagen ocupa el espacio */
     background-position: center top;
     border-radius: 2rem;
     padding: 5rem 0;
-
-    /* Imagen alineada a la derecha */
-    /* border: 1px solid red; */
 }
 
 .experience__title {
     display: block;
     width: 50%;
-    font-family: var(--font-syn);
-    font-size: 3rem;
+    font-family: var(--font-roboto);
+    font-size: 5rem;
     font-weight: 700;
     border-bottom: .2rem solid var(--color-llamativo);
 }
@@ -340,7 +329,7 @@ h5 {
 .experience__years-cont,
 .experience__projects-cont,
 .experience__clients-cont {
-    font-family: var(--font-syn);
+    font-family: var(--font-roboto);
     font-size: 4rem;
     /* Tamaño del texto */
     font-weight: bold;
@@ -377,8 +366,9 @@ h5 {
 .banner__about-title {
     margin-bottom: 5rem;
     text-align: center;
-    font-family: var(--font-syn);
-    font-size: 4rem;
+    font-family: var(--font-roboto);
+    font-weight: bold;
+    font-size: 5rem;
 }
 
 .banner__about-img {
@@ -472,8 +462,8 @@ h5 {
 
 .banner__service-title {
     display: inline-block;
-    font-family: var(--font-syn);
-    font-size: 3rem;
+    font-family: var(--font-roboto);
+    font-size: 5rem;
 }
 
 .line-color {
@@ -550,8 +540,8 @@ h5 {
 
 .service-card__title {
     margin-bottom: .5rem;
-    font-family: var(--font-syn);
-    font-size: 1.5rem;
+    font-family: var(--font-roboto);
+    font-size: 2rem;
     transition: margin-top 600ms;
 }
 
@@ -616,7 +606,7 @@ h5 {
     justify-content: center;
     align-items: center;
     padding: 5rem 0;
-    background: linear-gradient(90deg, rgba(59,143,217,0.8) 0%, rgba(29,29,29,0) 100%);
+    background: linear-gradient(90deg, rgba(59,143,217,0.8) 0%, rgba(29,29,29,0) 80%);
     border-radius: 2rem;
 }
 
@@ -626,8 +616,8 @@ h5 {
     margin-left: auto;
     margin-bottom: 5rem;
     text-align: right;
-    font-family: var(--font-syn);
-    font-size: 3rem;
+    font-family: var(--font-roboto);
+    font-size: 5rem;
     border-bottom: 1px solid var(--color-llamativo);
 }
 
@@ -656,17 +646,18 @@ h5 {
 }
 
 .scroll__img {
-    max-width: 20rem;
-    height: 5rem;
+    max-width: fit-content;
+    min-height: auto;
+    max-height: 10rem;
     margin: 0 3rem;
     transition: .5s;
     cursor: pointer;
     display: inline-block;
 }
 
-/* .scroll__img:not(:hover) {
+.scroll__img:not(:hover) {
     filter: grayscale(100%);
-} */
+}
 
 @keyframes animate {
     0% {
@@ -678,10 +669,59 @@ h5 {
     }
 }
 
-/* .scroll__logos:hover .scroll__content {
-    animation-play-state: paused;
-} */
-
 .scroll__img:hover {
-    transform: scale(1.2);
+    transform: scale(1.08);
 }
+
+/* Portafolio o nuestros trabajos */
+/* Estilos generales */
+.banner__porfolio {
+    padding: 5rem 10rem;
+  }
+  
+  .banner_portfolio-title {
+    width: fit-content;
+    font-size: 5rem;
+    font-family: var(--font-roboto);
+    color: var(--blanco-claro);
+    margin-bottom: 5rem;
+    border-bottom: .1rem solid var(--color-llamativo);
+  }
+  
+  /* Grid para los items */
+  .banner__porfolio-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  
+  .banner__portfolio-item:nth-child(5) {
+    grid-column: span 2;
+  }
+  
+  /* Cada item */
+  .banner__portfolio-item {
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.25); /* Sombra ligera */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .banner__portfolio-item:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Más sombra al pasar el ratón */
+  }
+  
+  .banner__portfolio-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .banner__portfolio-item-img:hover {
+    transform: scale(1.1);
+  }
+  
