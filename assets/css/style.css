@@ -178,8 +178,8 @@ h5 {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 10rem;
+    justify-content: center;
+    padding: 5rem 10rem;
 }
 
 .hero__info {
@@ -363,6 +363,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .banner__about-title {
@@ -376,12 +377,8 @@ h5 {
 .banner__about-img {
     position: relative;
     display: inline-block;
-
     width: 50%;
     height: 100%;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .banner__about-img::before {
@@ -745,21 +742,6 @@ h5 {
 .banner__portfolio-item:hover .banner__portfolio-item-img {
     transform: scale(1.2);
     /* Efecto hover */
-}
-
-
-@media screen and (max-width: 1200px) {
-    .banner__porfolio-content {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columnas para pantallas medianas */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .banner__porfolio-content {
-        grid-template-columns: 1fr;
-        /* 1 columna en pantallas móviles */
-    }
 }
 
 
