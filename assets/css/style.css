@@ -44,6 +44,30 @@ h5 {
     color: var(--color-title);
 }
 
+.vectores{
+    position: absolute;
+}
+
+.vector1{
+    width: 30%;
+    top: 0;
+    right: 0;
+}
+
+.vector2{
+    width: 50%;
+    top: -10rem;
+    left: 0;
+    z-index: -1;
+}
+
+.vector3{
+    width: 30%;
+    top: -10rem;
+    right: 0;
+    z-index: -1;
+}
+
 /* LAYOUT */
 .layout {
     position: relative;
@@ -60,6 +84,14 @@ h5 {
     transition: all 300ms ease-in-out;
     padding: 0rem 10rem;
     overflow: hidden;
+}
+
+.nav__desktop{
+    width: 100%;
+}
+
+.nav__mobile{
+    display: none;
 }
 
 /* ---- particles.js container ---- */
@@ -335,10 +367,6 @@ h5 {
     height: auto;
     padding: 5rem 10rem;
     position: relative;
-    /* background-image: url(../img/fondo-3.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
 }
 
 .banner__about-info {
@@ -624,7 +652,6 @@ h5 {
     mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
-
 .scroll__content {
     white-space: nowrap;
     animation: animate 50s linear infinite;
@@ -738,10 +765,10 @@ h5 {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-image: url(../img/fondo-1.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    background-image: url(../img/fondo-7.svg);
     background-position: center;
+    background-size: cover;
 }
 
 .banner__contact-header {
@@ -890,6 +917,7 @@ h5 {
 .footer__info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .footer__info-logo {
@@ -903,7 +931,7 @@ h5 {
 }
 
 .logo__footer {
-    width: 50%
+    width: 100%
 }
 
 .footer__services-title,
@@ -911,7 +939,7 @@ h5 {
     font-family: var(--font-roboto);
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .footer_nav-item {
@@ -925,7 +953,9 @@ h5 {
 
 .footer__contact-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
