@@ -68,6 +68,30 @@ h5 {
     z-index: -1;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Baja un poco */
+    transition: opacity 2s ease, transform 1s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su lugar */
+  }
+
+  .move {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .move:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  
 /* LAYOUT */
 .layout {
     position: relative;
@@ -236,7 +260,7 @@ h5 {
     font-family: var(--font-roboto);
     font-weight: bold;
     line-height: 10rem;
-    padding: 0rem 50rem 5rem 0;
+    margin-bottom: 5rem;
 }
 
 .hero__subtitle {
@@ -327,6 +351,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5rem;
 }
 
@@ -346,18 +371,15 @@ h5 {
 .experience__clients-cont {
     font-family: var(--font-roboto);
     font-size: 4rem;
-    /* Tamaño del texto */
     font-weight: bold;
-    /* Resalta el número */
     text-align: center;
-    /* Centra el texto */
     color: var(--blanco-claro);
-    /* Color del texto */
 }
 
 .experience__years-text,
 .experience__projects-text,
 .experience__clients-text {
+    font-size: 2rem;
     font-family: var(--font-gruppo);
 }
 
@@ -429,6 +451,7 @@ h5 {
 
 .banner__about-list-item {
     display: flex;
+    flex-wrap: nowrap;
     padding: .5rem 1rem;
     align-items: center;
     justify-content: center;
@@ -471,6 +494,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem 0;
 }
 
@@ -478,6 +502,8 @@ h5 {
     display: inline-block;
     font-family: var(--font-roboto);
     font-size: 5rem;
+    border-bottom: .1rem solid var(--color-llamativo);
+    margin-bottom: 3rem;
 }
 
 .line-color {
@@ -697,6 +723,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2rem 0;
 }
 
@@ -864,7 +891,7 @@ h5 {
 
 .form__button {
     padding: 2rem 4rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border: 0.2rem solid var(--blanco-claro);
     color: var(--blanco-claro);
     background-color: transparent;
@@ -891,20 +918,31 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__info-logo {
-    width: 10%;
+    width: 30%;
     font-size: 3rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .logo__footer {
-    width: 100%
+    width: 20%;
+}
+
+.footer__logo-title{
+    font-family: var(--font-roboto);
+    font-size: 3rem;
+}
+
+.footer__links{
+    width: 30%;
 }
 
 .footer__services-title,
@@ -913,6 +951,12 @@ h5 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer__services-nav{
+    width: 100%;
+    text-align: center;
 }
 
 .footer_nav-item {
@@ -924,7 +968,12 @@ h5 {
     color: var(--color-llamativo);
 }
 
+.footer__contact{
+    width: 30%;
+}
+
 .footer__contact-item {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;

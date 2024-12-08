@@ -61,3 +61,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animateCounter(); // Inicia la animación
 });
+
+//-----------------FADE IN---------------------------
+
+const faders = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('visible');
+    }
+  });
+});
+
+const wavePath = document.querySelector('.wave');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const direction = currentScrollY > lastScrollY ? 1 : -1; // Detecta dirección del scroll
+  const movement = direction * 10; // Ajusta la velocidad del movimiento
+  
+  // Aplica la transformación al path del SVG
+  wavePath.style.transform = `translateX(${movement}px)`;
+
+  // Actualiza la posición para el próximo scroll
+  lastScrollY = currentScrollY;
+});
