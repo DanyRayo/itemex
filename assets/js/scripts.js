@@ -89,3 +89,39 @@ window.addEventListener('scroll', () => {
   // Actualiza la posición para el próximo scroll
   lastScrollY = currentScrollY;
 });
+
+
+// Seleccionamos todos los elementos con clases de animación
+const elements = document.querySelectorAll('.translatex, .translatex-left');
+
+// Configuración del Intersection Observer
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active'); // Agrega la clase .active al elemento visible
+    }
+  });
+});
+
+// Observamos cada elemento
+elements.forEach(el => observer.observe(el));
+
+// Botón para regresar arriba
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+// Mostrar/ocultar el botón al hacer scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopBtn.style.display = 'flex';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// Funcionalidad del botón
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
