@@ -1,6 +1,7 @@
 @media screen and (max-width: 1200px) {
     .header,
-    .header-about {
+    .header-about,
+    .header-service {
         padding: 0rem 5rem;
     }
 
@@ -113,10 +114,27 @@
     }
 
     .about__info,
-    .about__img-container,
     .personal-info,
     .personal-img {
         width: 100%;
+    }
+
+    .about__img-container{
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .mv-card {
+        width: 90%;
+        padding: 3rem 0;
+    }
+
+    .card__header {
+        margin: 1rem 0;
+    }
+
+    .card__body {
+        padding: 0 2rem;
     }
 }
 
@@ -241,6 +259,7 @@
 
     .header,
     .header-about,
+    .header-service,
     .banner,
     .banner__about,
     .banner__services,
@@ -272,7 +291,8 @@
         font-size: 3rem;
     }
 
-    .experience__info {
+    .experience__info,
+    .card__title {
         width: 100%;
         font-size: 2.5rem;
     }
@@ -308,7 +328,10 @@
         flex-wrap: wrap;
     }
 
-    .banner__service-title {
+    .banner__service-title,
+    .about-title,
+    .mv-title,
+    .personal-title {
         font-size: 3rem;
     }
 
@@ -367,6 +390,14 @@
 
     .banner__contact-title {
         font-size: 3rem;
+    }
+
+    .about__img-container{
+        width: 100%;
+    }
+
+    .card__text{
+        font-size: 1.5rem;
     }
 
     .footer {
