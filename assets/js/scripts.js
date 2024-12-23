@@ -67,27 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
 const faders = document.querySelectorAll('.fade-in');
 
 window.addEventListener('scroll', () => {
-  faders.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      el.classList.add('visible');
-    }
-  });
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.classList.add('visible');
+        }
+    });
 });
 
 const wavePath = document.querySelector('.wave');
 let lastScrollY = 0;
 
 window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
-  const direction = currentScrollY > lastScrollY ? 1 : -1; // Detecta dirección del scroll
-  const movement = direction * 10; // Ajusta la velocidad del movimiento
-  
-  // Aplica la transformación al path del SVG
-  wavePath.style.transform = `translateX(${movement}px)`;
+    const currentScrollY = window.scrollY;
+    const direction = currentScrollY > lastScrollY ? 1 : -1; // Detecta dirección del scroll
+    const movement = direction * 10; // Ajusta la velocidad del movimiento
 
-  // Actualiza la posición para el próximo scroll
-  lastScrollY = currentScrollY;
+    // Aplica la transformación al path del SVG
+    wavePath.style.transform = `translateX(${movement}px)`;
+
+    // Actualiza la posición para el próximo scroll
+    lastScrollY = currentScrollY;
 });
 
 
@@ -96,11 +96,11 @@ const elements = document.querySelectorAll('.translatex, .translatex-left');
 
 // Configuración del Intersection Observer
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active'); // Agrega la clase .active al elemento visible
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active'); // Agrega la clase .active al elemento visible
+        }
+    });
 });
 
 // Observamos cada elemento
@@ -124,4 +124,14 @@ scrollToTopBtn.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+
+//--------------------Menu hamburguesa-------------------------
+const navIcon = document.querySelector('.nav-bars');
+const mobileMenu = document.getElementById('mobileMenu');
+
+navIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navIcon.classList.toggle('active');
 });
