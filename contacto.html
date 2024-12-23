@@ -16,13 +16,12 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
-    <title>ITELMéxico | Acerca de</title>
+    <title>ITELMéxico | Consumibles y papelería</title>
 </head>
 
 <body>
     <div class="layout">
-        <header class="header-about">
-            <div id="particles-js"></div>
+        <header class="header-cableado">
             <div class="nav__desktop">
                 <article class="header__info">
                     <a href="./index.html" class="header__content">
@@ -69,80 +68,39 @@
                     <i class="fa-solid fa-bars nav-bars"></i>
                 </div>
             </div>
-            <section class="hero">
-                <div class="hero__info">
-                    <h1 class="hero__title translatex-left">Acerca de nosotros</h1>
-                    <h3 class="hero__subtitle translatex">"Conozca nuestra experiencia y compromiso"</h3>
-                    <a href="#somos" class="btn-transparent translatex-left">Leer más</a>
-                </div>
-            </section>
         </header>
-        <section class="banner fade-in">
-            <article class="about" id="somos">
-                <div class="about__info">
-                    <h2 class="about-title translatex-left">¿Quienes somos?</h2>
-                    <p class="about-text translatex-left">Somos una empresa Mexicana que por más de 23 años nos hemos
-                        dedicado a
-                        proporcionar soluciones integrales de comunicación que promueven y apoyan el desarrollo de su
-                        empresa.</p>
-                    <p class="about-text translatex-left"><span class="span">Nuestro objetivo principal es garantizar el
-                            óptimo funcionamiento</span> de todos sus
-                        medios de comunicación relacionados con su organización, para lo cual, proponemos la mejor
-                        alternativa acorde a las necesidades de su empresa, y así, con su previa autorización, ejecutar
-                        las tecnologías, normas, instalaciones y procesos necesarios para entregar la solución deseada.
-                    </p>
-                </div>
-                <div class="about__img-container translatex">
-                    <div class="bg-abstract">
-                        <img src="./assets/img/abstract-llamativo-4.png" alt="" class="about-abstract">
-                        <img src="./assets/img/img-14.jpg" alt="Imagen about" class="about__img-top">
-                        <img src="./assets/img/bg-4.jpg" alt="Imagen about" class="about__img-buttom">
+        <section class="banner__contact">
+            <div class="banner__contact-body">
+                <h2 class="banner__contact-title">Contáctanos</h2>
+                <form id="form" action="#" class="contact__form">
+                    <div class="form__container">
+                        <section class="form__left">
+                            <div class="form__group">
+                                <input type="text" class="form__input" name="name" required placeholder="Nombre">
+                                <label for="name" class="form__label">Nombre</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" name="email" required placeholder="Email">
+                                <label for="email" class="form__label">Email</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" name="subject" required placeholder="Subject">
+                                <label for="subject" class="form__label">Asunto</label>
+                            </div>
+                        </section>
+                        <section class="form__right">
+                            <div class="form__group form__group--textarea">
+                                <textarea class="form__input form__input--textarea" name="message" required
+                                    placeholder="Mensaje"></textarea>
+                                <label for="message" class="form__label">Mensaje</label>
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </article>
-        </section>
-        <section class="banner translatex">
-            <div class="mv-bg">
-                <h2 class="mv-title">Nuestra misión y visión</h2>
-                <div class="mv">
-                    <article class="mv-card">
-                        <div class="card__header">
-                            <i class="card-icon fa-solid fa-flag-checkered"></i>
-                            <h3 class="card__title">Misión</h3>
-                        </div>
-                        <div class="card__body">
-                            <p class="card__text">Proporcionar soluciones innovadoras y eficientes en
-                                telecomunicaciones, destacándonos por nuestro compromiso, profesionalismo y atención al
-                                cliente.</p>
-                        </div>
-                    </article>
-                    <article class="mv-card">
-                        <div class="card__header">
-                            <i class="card-icon fa-solid fa-eye"></i>
-                            <h3 class="card__title">Visión</h3>
-                        </div>
-                        <div class="card__body">
-                            <p class="card__text">Convertirnos en líderes nacionales en la instalación y mantenimiento
-                                de redes de telecomunicaciones, ayudando a construir un México más conectado y
-                                eficiente.</p>
-                        </div>
-                    </article>
-                </div>
+                    <input type="submit" id="button" class="form__button fade-in" value="Enviar mensaje">
+                </form>
             </div>
         </section>
-        <section class="banner fade-in">
-            <h2 class="personal-title translatex">¿Por qué elegirnos?</h2>
-            <article class="personal-container">
-                <div class="personal-info">
-                    <p class="personal-text"><span class="span">Nuestro equipo está capacitado y comprometido,</span>
-                        preparado para atender contingencias con eficacia y profesionalismo.</p>
-                    <a href="contacto.html" class="btn-contacto translatex-left">Contáctanos</a>
-                </div>
-                <div class="personal-img">
-                    <img src="./assets/img/img-1.jpg" alt="" class="personal__img move">
-                </div>
-            </article>
-        </section>
+
         <div class="floating-buttons">
             <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button"
                 title="Enviar mensaje por WhatsApp">
@@ -188,6 +146,33 @@
     <script src="./assets/js/particles.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        emailjs.init('BfedhkMwy6qBoIP58')
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Enviando...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_1da60cy';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Enviar mensaje';
+                        alert('Mensaje enviado correctamente');
+                    }, (err) => {
+                        btn.value = 'Enviar mensaje';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
 </body>
 
 </html>

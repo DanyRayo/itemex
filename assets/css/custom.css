@@ -1,7 +1,9 @@
 @media screen and (max-width: 1200px) {
     .header,
     .header-about,
-    .header-service {
+    .header-service,
+    .header-cableado,
+    .servicio__clientes {
         padding: 0rem 5rem;
     }
 
@@ -28,15 +30,17 @@
 
     .experience__title,
     .experience__info,
-    .experience__counts {
+    .experience__counts,
+    .hero__title,
+    .servicio__title {
         width: 65%;
     }
 
-    .banner__about{
+    .banner__about {
         padding: 5rem;
     }
 
-    .banner__about-img{
+    .banner__about-img {
         width: 100%;
     }
 
@@ -119,7 +123,7 @@
         width: 100%;
     }
 
-    .about__img-container{
+    .about__img-container {
         margin: 0 auto;
         width: 60%;
     }
@@ -136,6 +140,27 @@
     .card__body {
         padding: 0 2rem;
     }
+
+    .servicio {
+        padding: 5rem;
+    }
+    
+    .servicio__cont-img {
+        flex: 1 60rem;
+    }
+
+    .servicio__cont-info {
+        padding-left: 0rem;
+    }
+
+    .servicio__standar-content {
+        margin: 5rem auto;
+    }
+
+    .clientes__img{
+        margin: 5rem;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -243,7 +268,8 @@
         margin-bottom: 3rem;
     }
 
-    .banner_portfolio-title {
+    .banner_portfolio-title,
+    .service-banner__title {
         font-size: 4rem;
         margin-bottom: 2rem;
     }
@@ -253,6 +279,29 @@
         /* 1 columna en pantallas móviles */
     }
 
+    .banner-service{
+        padding: 5rem;
+    }
+
+    .service-banner{
+        flex-direction: column-reverse;
+    }
+
+    .service-banner__cont,
+    .service-banner__cont-img {
+        width: 100%;
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clientes__img{
+        width: fit-content;
+        height: auto;
+        max-height: 5rem;
+    }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -260,12 +309,17 @@
     .header,
     .header-about,
     .header-service,
+    .header-cableado,
     .banner,
     .banner__about,
     .banner__services,
     .banner__scroll,
     .banner__portfolio,
-    .banner__contact {
+    .banner__contact,
+    .banner-service,
+    .servicio,
+    .servicio__details,
+    .servicio__clientes {
         padding: 2rem;
     }
 
@@ -331,7 +385,12 @@
     .banner__service-title,
     .about-title,
     .mv-title,
-    .personal-title {
+    .personal-title,
+    .service-banner__title,
+    .services__title,
+    .servicio__title,
+    .servicio__subtitle,
+    .clientes__title {
         font-size: 3rem;
     }
 
@@ -387,17 +446,24 @@
         margin: 0 2rem;
     }
 
-
     .banner__contact-title {
         font-size: 3rem;
     }
 
-    .about__img-container{
+    .about__img-container {
         width: 100%;
     }
 
-    .card__text{
+    .card__text {
         font-size: 1.5rem;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .clientes__img{
+        max-height: 5rem;
     }
 
     .footer {
@@ -406,12 +472,13 @@
     }
 
     .footer__info-logo,
-    .footer__links{
+    .footer__links {
         width: 100%;
         margin-bottom: 5rem;
     }
 
-    .footer__contact{
+    .footer__contact {
         width: 100%;
     }
+
 }
