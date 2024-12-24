@@ -128,10 +128,28 @@ scrollToTopBtn.addEventListener('click', () => {
 
 
 //--------------------Menu hamburguesa-------------------------
-const navIcon = document.querySelector('.nav-bars');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuToggle = document.querySelector('.nav-bars');
+const dropdownToggle = document.querySelector('.dropdown__toggle');
+const dropdownMenu = document.querySelector('.dropdown');
 
-navIcon.addEventListener('click', () => {
+// Abre el menú móvil al hacer clic en el ícono
+menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
-    navIcon.classList.toggle('active');
+    menuToggle.classList.toggle('active'); // Cambia el ícono al abrir
+});
+
+// Muestra/Oculta el submenú de "Servicios"
+dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita que el enlace recargue la página
+    dropdownMenu.classList.toggle('active');
+});
+
+// Cierra el menú móvil al hacer clic fuera de él
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileMenu.contains(event.target) || menuToggle.contains(event.target);
+    if (!isClickInsideMenu) {
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active'); // Resetea el ícono
+    }
 });

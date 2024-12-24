@@ -47,12 +47,29 @@
                         <li class="navbar__list">
                             <a href="./acerca-de.html" class="nabvar__link">Acerca de</a>
                         </li>
-                        <li class="navbar__list">
+                        <li class="navbar__list navbar__dropdown">
                             <a href="./servicios.html" class="nabvar__link">Servicios</a>
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="./cableado-estructurado.html">Cableado
+                                        estructurado</a></li>
+                                <li class="dropdown__item"><a href="./fibra-optica.html">Fibra Óptica</a></li>
+                                <li class="dropdown__item"><a href="./comunicacion-inalambrica.html">Comunicación
+                                        inalámbrica</a></li>
+                                <li class="dropdown__item"><a href="./servicios-telefonicos.html">Servicios
+                                        telefónicos</a></li>
+                                <li class="dropdown__item"><a href="./seguridad.html">Seguridad</a></li>
+                                <li class="dropdown__item"><a href="./instalaciones-electricas.html">Instalaciones
+                                        eléctricas de media y baja tensión</a></li>
+                                <li class="dropdown__item"><a href="./telecomunicaciones.html">Equipo activo de
+                                        telecomunicaciones</a></li>
+                                <li class="dropdown__item"><a href="./equipo-de-respaldo.html">Equipo de respaldo</a>
+                                </li>
+                                <li class="dropdown__item"><a href="./papeleria.html">Consumibles y papelería</a></li>
+                            </ul>
                         </li>
-                        <li class="navbar__list">
+                        <!-- <li class="navbar__list">
                             <a href="./portafolio.html" class="nabvar__link">Portafolio</a>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="header__search">
                         <a href="contacto.html" class="search__contacto">Contáctanos</a>
@@ -62,12 +79,35 @@
             <div class="nav__mobile">
                 <div class="nav__mobile-logo">
                     <a href="index.html">
-                        <img src="./assets/img/logoipsum-224.svg" alt="">
+                        <img src="./assets/img/logoipsum-224.svg" alt="Logo">
                     </a>
                 </div>
                 <div class="nav__mobile-icon">
                     <i class="fa-solid fa-bars nav-bars"></i>
                 </div>
+            </div>
+            <div class="mobile__menu" id="mobileMenu">
+                <ul class="mobile__menu-options">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./acerca-de.html">Acerca de</a></li>
+                    <li class="dropdown">
+                        <a href="./servicios.html" class="dropdown__toggle">Servicios <i class="fa-solid fa-chevron-down down-icon"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="./cableado-estructurado.html">Cableado estructurado</a></li>
+                            <li><a href="./fibra-optica.html">Fibra Óptica</a></li>
+                            <li><a href="./comunicacion-inalambrica.html">Comunicación inalámbrica</a></li>
+                            <li><a href="./servicios-telefonicos.html">Servicios telefónicos</a></li>
+                            <li><a href="./seguridad.html">Seguridad</a></li>
+                            <li><a href="./instalaciones-electricas.html">Instalaciones eléctricas de media y baja
+                                    tensión</a></li>
+                            <li><a href="./telecomunicaciones.html">Equipo activo de telecomunicaciones</a></li>
+                            <li><a href="./equipo-de-respaldo.html">Equipo de respaldo</a></li>
+                            <li><a href="./papeleria.html">Consumibles y papelería</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="./portafolio.html">Portafolio</a></li> -->
+                    <li><a href="./contacto.html">Contáctanos</a></li>
+                </ul>
             </div>
             <section class="hero">
                 <div class="hero__info">
