@@ -16,99 +16,152 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="shortcut icon" href="./assets/img/fav-icon.png" type="image/x-icon">
     <title>ITELMéxico | Servicios</title>
 </head>
 
 <body>
-    <div class="layout">
-        <header class="header-service">
-            <div id="particles-js"></div>
-            <div class="nav__desktop">
-                <article class="header__info">
-                    <a href="./index.html" class="header__content">
-                        <img src="./assets/img/logoipsum-224.svg" alt="Logo" class="header__logo-img">
-                        ITELMéxico
-                    </a>
-                    <div class="header__content">
-                        <i class="header__whatsapp-icon fa-brands fa-whatsapp"></i>
-                        <p class="header__text">(+52) 5544 3322 11</p>
-                    </div>
-                    <div class="header__social-net">
-                        <i class="header__social-icon fa-brands fa-linkedin-in"></i>
-                        <i class="header__social-icon fa-brands fa-facebook-f"></i>
-                        <i class="header__social-icon fa-brands fa-x-twitter"></i>
-                    </div>
-                </article>
-                <nav class="header__navbar">
-                    <ul class="navbar__options">
-                        <li class="navbar__list">
-                            <a href="./index.html" class="nabvar__link">Inicio</a>
-                        </li>
-                        <li class="navbar__list">
-                            <a href="./acerca-de.html" class="nabvar__link">Acerca de</a>
-                        </li>
-                        <li class="navbar__list navbar__dropdown">
-                            <a href="./servicios.html" class="nabvar__link">Servicios <i class="fa-solid fa-sort-down icon-down"></i></a>
-                            <ul class="dropdown__menu">
-                                <li class="dropdown__item"><a href="./cableado-estructurado.html">Cableado
-                                        estructurado</a></li>
-                                <li class="dropdown__item"><a href="./fibra-optica.html">Fibra Óptica</a></li>
-                                <li class="dropdown__item"><a href="./comunicacion-inalambrica.html">Comunicación
-                                        inalámbrica</a></li>
-                                <li class="dropdown__item"><a href="./servicios-telefonicos.html">Servicios
-                                        telefónicos</a></li>
-                                <li class="dropdown__item"><a href="./seguridad.html">Seguridad</a></li>
-                                <li class="dropdown__item"><a href="./instalaciones-electricas.html">Instalaciones
-                                        eléctricas de media y baja tensión</a></li>
-                                <li class="dropdown__item"><a href="./telecomunicaciones.html">Equipo activo de
-                                        telecomunicaciones</a></li>
-                                <li class="dropdown__item"><a href="./equipo-de-respaldo.html">Equipo de respaldo</a>
-                                </li>
-                                <li class="dropdown__item"><a href="./papeleria.html">Consumibles y papelería</a></li>
-                            </ul>
-                        </li>
-                        <!-- <li class="navbar__list">
-                            <a href="./portafolio.html" class="nabvar__link">Portafolio</a>
-                        </li> -->
-                    </ul>
-                    <div class="header__search">
-                        <a href="contacto.html" class="search__contacto">Contáctanos</a>
-                    </div>
-                </nav>
+    <div class="menu-mobile">
+        <header class="menu-mobile__header">
+            <div class="menu-mobile__container-logo">
+                <a href="#" class="menu-mobile__link-logo">
+                    <img src="./assets/img/Recurso-3.png" alt="Logo del sitio web" class="menu-mobile__logo">
+                </a>
             </div>
-            <div class="nav__mobile">
-                <div class="nav__mobile-logo">
-                    <a href="index.html">
-                        <img src="./assets/img/logoipsum-224.svg" alt="Logo">
-                    </a>
-                </div>
-                <div class="nav__mobile-icon">
-                    <i class="fa-solid fa-bars nav-bars"></i>
-                </div>
-            </div>
-            <div class="mobile__menu" id="mobileMenu">
-                <ul class="mobile__menu-options">
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./acerca-de.html">Acerca de</a></li>
-                    <li class="dropdown">
-                        <a href="./servicios.html" class="dropdown__toggle">Servicios <i class="fa-solid fa-chevron-down down-icon"></i></a>
-                        <ul class="dropdown__menu">
-                            <li><a href="./cableado-estructurado.html">Cableado estructurado</a></li>
-                            <li><a href="./fibra-optica.html">Fibra Óptica</a></li>
-                            <li><a href="./comunicacion-inalambrica.html">Comunicación inalámbrica</a></li>
-                            <li><a href="./servicios-telefonicos.html">Servicios telefónicos</a></li>
-                            <li><a href="./seguridad.html">Seguridad</a></li>
-                            <li><a href="./instalaciones-electricas.html">Instalaciones eléctricas de media y baja
-                                    tensión</a></li>
-                            <li><a href="./telecomunicaciones.html">Equipo activo de telecomunicaciones</a></li>
-                            <li><a href="./equipo-de-respaldo.html">Equipo de respaldo</a></li>
-                            <li><a href="./papeleria.html">Consumibles y papelería</a></li>
+
+            <button class="menu-mobile__close">
+                <i class="menu-mobile__icon-close fa-solid fa-xmark"></i>
+            </button>
+        </header>
+
+        <div class="menu-mobile__body">
+            <nav class="menu-mobile__nav">
+                <ul class="menu-mobile__list">
+                    <li class="menu-mobile__item">
+                        <a href="index.html" class="menu-mobile__link">Inicio</a>
+                    </li>
+
+                    <li class="menu-mobile__item">
+                        <a href="acerca-de.html" class="menu-mobile__link">Acerca de</a>
+                    </li>
+                    
+                    <li class="menu-mobile__item">
+                        <a href="#" class="menu-mobile__link">Servicios
+                            <i class="fa-solid fa-chevron-down menu-mobile__icon"></i>
+                        </a>
+                        <ul class="menu-mobile__submenu-mobile">
+                            <li class="submenu-mobile__item">
+                                <a href="cableado-estructurado.html" class="submenu-mobile__link">Cableado estructurado</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="fibra-optica.html" class="submenu-mobile__link">Fibra óptica</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="comunicacion-inalambrica.html" class="submenu-mobile__link">Comunicación inalámbrica</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="servicios-telefonicos.html" class="submenu-mobile__link">Servicios telefónicos</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="seguridad.html" class="submenu-mobile__link">Seguridad</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="instalaciones-electricas.html" class="submenu-mobile__link">Instalaciones eléctricas de media y baja tensión</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="telecomunicaciones.html" class="submenu-mobile__link">Equipo activo de telecomunicaciones</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="equipo-de-respaldo.html" class="submenu-mobile__link">Equipo de respaldo</a>
+                            </li>
+                            <li class="submenu-mobile__item">
+                                <a href="papeleria.html" class="submenu-mobile__link">Papelería y consumibles</a>
+                            </li>
                         </ul>
                     </li>
-                    <!-- <li><a href="./portafolio.html">Portafolio</a></li> -->
-                    <li><a href="./contacto.html">Contáctanos</a></li>
+
+                    <li class="menu-mobile__item">
+                        <a href="contacto.html" class="menu-mobile__link">Contacto</a>
+                    </li>
                 </ul>
-            </div>
+            </nav>
+        </div>
+    </div>
+    <div class="layout">
+        <header class="header-service">
+            <!-- Menu -->
+            <section class="layout__menu">
+                <header class="menu__navbar">
+
+                    <!-- Logo -->
+                    <div class="navbar__logo">
+                        <a href="index.html" class="navbar__link-logo">
+                            <img src="./assets/img/Logo.png" class="navbar__logo">
+                        </a>
+                    </div>
+
+                    <!-- Botón del menú responsive-->
+                    <div class="navbar__mobile-btn">
+                        <button class="mobile-btn__wrap">
+                            <span class="mobile-btn__line"></span>
+                            <span class="mobile-btn__line"></span>
+                            <span class="mobile-btn__line"></span>
+                        </button>
+                    </div>
+
+                    <!-- Navegación -->
+                    <nav class="navbar__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__title">Inicio</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="acerca-de.html" class="nav__title">Acerca de</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="#" class="nav__title">Servicios
+                                    <i class="fa-solid fa-chevron-down nav__icon"></i>
+                                </a>
+                                <ul class="nav__submenu">
+                                    <li class="submenu__item">
+                                        <a href="cableado-estructurado.html" class="submenu__title">Cableado estructurado</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="fibra-optica.html" class="submenu__title">Fibra óptica</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="comunicacion-inalambrica.html" class="submenu__title">Comunicación inalámbrica</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="servicios-telefonicos.html" class="submenu__title">Servicios telefónicos</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="seguridad.html" class="submenu__title">Seguridad</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="instalaciones-electricas.html" class="submenu__title">Instalaciones eléctricas de media y baja tensión</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="telecomunicaciones.html" class="submenu__title">Equipo activo de telecomunicaciones</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="equipo-de-respaldo.html" class="submenu__title">Equipo de respaldo</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="papeleria.html" class="submenu__title">Papeleria y consumibles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__title">Contactanos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </section>
+            <!-- Fin segunda versión -->
             <section class="hero">
                 <div class="hero__info">
                     <h1 class="hero__title translatex-left">Nuestros servicios</h1>
@@ -217,8 +270,7 @@
         <footer class="footer fade-in">
             <div class="footer__info">
                 <div class="footer__info-logo">
-                    <img src="./assets/img/logoipsum-224.svg" alt="" class="logo__footer">
-                    <h3 class="footer__logo-title">ITELMéxico</h3>
+                    <img src="./assets/img/Logo.png" alt="" class="logo__footer">
                 </div>
                 <nav class="footer__links">
                     <h2 class="footer__services-title">Navegación rápida</h2>

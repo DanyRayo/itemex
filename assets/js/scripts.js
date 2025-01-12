@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".experience__years-cont");
     let currentNumber = 0; // Valor inicial
-    const targetNumber = 23; // Número final
+    const targetNumber = 25; // Número final
     const duration = 3000; // Duración de la animación en ms (3 segundos)
     const totalFrames = Math.round(duration / 16); // Número total de frames (~60fps)
     const increment = targetNumber / totalFrames; // Incremento suave por frame
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".experience__projects-cont");
     let currentNumber = 0; // Valor inicial
-    const targetNumber = 15; // Número final
+    const targetNumber = 230; // Número final
     const duration = 3000; // Duración de la animación en ms (3 segundos)
-    const totalFrames = Math.round(duration / 16); // Número total de frames (~60fps)
+    const totalFrames = Math.round(duration / 200); // Número total de frames (~60fps)
     const increment = targetNumber / totalFrames; // Incremento suave por frame
 
     const animateCounter = () => {
@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".experience__clients-cont");
     let currentNumber = 0; // Valor inicial
-    const targetNumber = 50; // Número final
+    const targetNumber = 150; // Número final
     const duration = 3000; // Duración de la animación en ms (3 segundos)
-    const totalFrames = Math.round(duration / 16); // Número total de frames (~60fps)
+    const totalFrames = Math.round(duration / 120); // Número total de frames (~60fps)
     const increment = targetNumber / totalFrames; // Incremento suave por frame
 
     const animateCounter = () => {
@@ -128,28 +128,73 @@ scrollToTopBtn.addEventListener('click', () => {
 
 
 //--------------------Menu hamburguesa-------------------------
-const mobileMenu = document.getElementById('mobileMenu');
-const menuToggle = document.querySelector('.nav-bars');
-const dropdownToggle = document.querySelector('.dropdown__toggle');
-const dropdownMenu = document.querySelector('.dropdown');
+document.addEventListener("DOMContentLoaded", (event) => {
 
-// Abre el menú móvil al hacer clic en el ícono
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    menuToggle.classList.toggle('active'); // Cambia el ícono al abrir
+    // Seleccionar mis dos elementos principales
+    let mobile_btn = document.querySelector(".navbar__mobile-btn");
+    let mobile_menu = document.querySelector(".menu-mobile");
+
+    //Función mostrar y ocultar menú
+    const showHiddenMenu = () => {
+        let show = document.querySelector(".menu-mobile--show");
+
+        if (show) {
+            mobile_menu.classList.remove("menu-mobile--show");
+        } else {
+            mobile_menu.classList.add("menu-mobile--show");
+        }
+    };
+
+    // Al dar click al boton del menú mostrar el menú de navegación
+    mobile_btn.addEventListener("click", showHiddenMenu);
+
+    //Al redimensionar la pantalla ocultar el menú si es necesario
+    window.addEventListener("resize", () => {
+        let window_width = parseInt(document.body.clientWidth);
+
+        if (window_width >= 1000) {
+            mobile_menu.classList.remove("menu-mobile--show");
+        }
+    });
+
+    // poder cerrar el menú con el botón X
+    let btn_close = document.querySelector(".menu-mobile__close");
+
+    btn_close.addEventListener("click", showHiddenMenu);
+
+    //Desplegar submenús
+    let menu_item = document.querySelectorAll(".menu-mobile__item");
+
+    menu_item.forEach(item => {
+
+        item.addEventListener("click", (event) => {
+           let submenu = item.lastElementChild;
+           
+           if(submenu.className == "menu-mobile__submenu-mobile"){
+                if(submenu.style.display === "block"){
+                    submenu.style.display = "none";
+                }else{
+                    submenu.style.display = "block";
+                }
+           }
+        });
+
+    });
 });
 
-// Muestra/Oculta el submenú de "Servicios"
-dropdownToggle.addEventListener('click', (e) => {
-    e.preventDefault(); // Evita que el enlace recargue la página
-    dropdownMenu.classList.toggle('active');
+
+// Navbar fixed
+document.addEventListener("DOMContentLoaded", () => {
+    let navbar = document.querySelector(".menu__navbar");
+
+    window.addEventListener("scroll", () => {
+        let scroll = window.scrollY;
+
+        if (scroll > 120) {
+            navbar.classList.add("menu__navbar--fixed");
+        } else {
+            navbar.classList.remove("menu__navbar--fixed");
+        }
+    });
 });
 
-// Cierra el menú móvil al hacer clic fuera de él
-document.addEventListener('click', (event) => {
-    const isClickInsideMenu = mobileMenu.contains(event.target) || menuToggle.contains(event.target);
-    if (!isClickInsideMenu) {
-        mobileMenu.classList.remove('active');
-        menuToggle.classList.remove('active'); // Resetea el ícono
-    }
-});
